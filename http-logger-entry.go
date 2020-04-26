@@ -3,6 +3,7 @@ package requestlogger
 import (
 	"fmt"
 	"github.com/sirupsen/logrus"
+	"net/http"
 	"time"
 )
 
@@ -11,7 +12,7 @@ type requestLoggerEntry struct {
 	Level  *logrus.Level
 }
 
-func (l *requestLoggerEntry) Write(status, bytes int, elapsed time.Duration) {
+func (l *requestLoggerEntry) Write(status, bytes int, header http.Header,  elapsed time.Duration, extra interface{}) {
 	l.Logger = l.Logger.WithFields(logrus.Fields{
 		"status":     status,
 		"length":     bytes,
