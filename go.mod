@@ -3,7 +3,7 @@ module go.ajitem.com/http-logger
 go 1.12
 
 require (
-	github.com/go-chi/chi v4.1.1+incompatible
+	github.com/go-chi/chi v4.1.2+incompatible
 	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect
 	github.com/sirupsen/logrus v1.5.0
 	github.com/stretchr/objx v0.1.1 // indirect
